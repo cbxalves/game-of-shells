@@ -13,7 +13,6 @@
 
     .container {
       display: flex;
-      margin-bottom: 10vh;
       width: 90%;
       justify-content: space-evenly;
       z-index: 1;
@@ -23,9 +22,12 @@
       
         .cup-image {
           flex: 1;
-          width: 25vw;
+          width: 20vw;
           height: inherit;
           cursor: pointer;
+          @media only screen and (max-width: 600px) {
+            width: 30vw;
+          }
         
           &:hover {
             filter: brightness(0.5);
@@ -45,6 +47,9 @@
           right: 40%;
           bottom: 1vw;
           z-index: -1;
+          @media only screen and (max-width: 600px) {
+            width: 7vw;
+          }
         }
       }
     }
@@ -54,6 +59,7 @@
       font-weight: bold;
       font-size: 2rem;
       height: 2rem;
+      margin: 10vh 0;
     
       &.success {
         color: green;
@@ -61,10 +67,13 @@
     }
     
     .actions {
-      margin-top: 10vh;
-      width: 85%;
+      width: 80%;
       display: flex;
       justify-content: space-evenly;
+      @media only screen and (max-width: 600px) {
+        width: 85%;
+      }
+      
     
       .btn {
         width: 20vw;
